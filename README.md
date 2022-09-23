@@ -16,6 +16,7 @@ npm run build
 ```
 
 ### Deploy
+Create the feature branch from `deploy-pages`
 After your commit the changes in your feature branch, do this:
 
 ```
@@ -24,6 +25,7 @@ git merge <feature> --squash
 git commit -m '<message>'
 npm run build
 git add dist && git commit -m '<message>'
+cp CNAME dist
 git subtree push --prefix dist origin gh-pages
 ```
 NOTE: the `deploy-pages` branch allows commit the changes in the `dist` folder
